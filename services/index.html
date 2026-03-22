@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Услуги и стоимость | Психолог</title>
+<meta name="description" content="Услуги и стоимость — индивидуальная терапия, семейные консультации. Психолог в Ставрополе."/>
+<meta property="og:title" content="Услуги и стоимость | Психолог"/>
+<meta property="og:description" content="Индивидуальная терапия, семейные консультации, онлайн и очно."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/services/"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="../index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../about/index.html">Обо мне</a>
+<a class="text-primary font-bold transition-colors" href="index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../blog/index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../reviews/index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="../booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../about/index.html">Обо мне</a>
+<a class="block text-sm text-primary font-bold" href="index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../blog/index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="../booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex-1">
+<!-- Hero Section -->
+<div class="px-6 md:px-20 lg:px-40 py-12 md:py-20 flex flex-col gap-6">
+<div class="max-w-[800px]">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
+                        Услуги и стоимость
+                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed">
+                        Профессиональная психологическая поддержка в различных форматах. Мы найдем подходящее решение для вашего запроса.
+                    </p>
+</div>
+</div>
+<!-- Services Grid -->
+<div class="px-6 md:px-20 lg:px-40 pb-20 space-y-8">
+<!-- Individual Therapy -->
+<div class="p-0 md:p-4 @container">
+<div class="flex flex-col lg:flex-row items-stretch justify-start rounded-2xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="w-full lg:w-1/3 bg-center bg-no-repeat aspect-video lg:aspect-square bg-cover" role="img" aria-label="Спокойная женщина на консультации у психолога" data-alt="Спокойная женщина на консультации у психолога" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk5wWXnGgEy160iUeIAw3xNWWsmCDLGgzCR5wAYNbas99w1XEvm7gAEG-BybffdLOWTQ1UBhagqqPrVrfCD6ulOWQTOZsQCCGePU7GV9bEChHPus95jsp-cIdnV45WfcQFTLMVjg6n0_d9b-cDWSCZVi39PAD6CB91j7dg1y8Jfqw-UbhyD_EDX_K8aS9LntPA7m2L9Z0hXaGyTZ3MypQDgSnj9nI95jjWWkHWjdNMkVlUZavccHhqrOnUtd1-19_a4YlFDkgQetw");'>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-6 p-6 md:p-10">
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight mb-3">Индивидуальная терапия</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
+                                    Глубокая работа с вашими личными запросами: тревожность, самооценка, поиск смысла, депрессивные состояния и эмоциональное выгорание.
+                                </p>
+<div class="flex flex-wrap gap-4 text-sm font-medium text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">schedule</span> 50 минут</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">payments</span> 5 000 ₽</span>
+</div>
+</div>
+<button class="w-fit flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary text-slate-900 text-sm font-bold transition-all hover:scale-[1.02]">
+                                Записаться на сессию
+                            </button>
+</div>
+</div>
+</div>
+<!-- Couples Counseling -->
+<div class="p-0 md:p-4 @container">
+<div class="flex flex-col lg:flex-row-reverse items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="w-full lg:w-1/3 bg-center bg-no-repeat aspect-video lg:aspect-square bg-cover" role="img" aria-label="Пара на семейной консультации" data-alt="Пара на семейной консультации" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLa7YxKJcHWyMV5cmfNCGfAocMA21fzY8u3sQPIzmPwOZJPKuKvJ6eI7O74hfC1EhvHDHpNL5YOWygbu3fHL8k-R7HxJuKTY7B-K0NQbF63PfpAo7XGlLhczFRqcyNDKBw4kP4p6BxUARG5Q8lHgciK2IbtAGsk8memiBkXMjR253tDxQ0A-rRKkSUdg3xP7cOtk7-nH3UmSi6oz3M_9R5Mw3_yVtknbM4bFMF6A6OPxtft2gUifl7LlA7ycH445e_0U6M5BMCVqs");'>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-6 p-6 md:p-10">
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight mb-3">Семейное консультирование</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
+                                    Помощь парам в преодолении кризисов, улучшении коммуникации и поиске взаимопонимания. Работа с конфликтами и восстановление доверия.
+                                </p>
+<div class="flex flex-wrap gap-4 text-sm font-medium text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">schedule</span> 90 минут</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">payments</span> 7 500 ₽</span>
+</div>
+</div>
+<button class="w-fit flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary text-slate-900 text-sm font-bold transition-all hover:scale-[1.02]">
+                                Записаться парой
+                            </button>
+</div>
+</div>
+</div>
+<!-- Online Options -->
+<div class="p-0 md:p-4 @container">
+<div class="flex flex-col lg:flex-row items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="w-full lg:w-1/3 bg-center bg-no-repeat aspect-video lg:aspect-square bg-cover" role="img" aria-label="Онлайн-консультация по видеосвязи" data-alt="Онлайн консультация по видеосвязи" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoGVntzLp8bF9oGS_aiW0pveX501haJ8TNknr9GX3pygMpQJUBENcHhSHk7_nl4i0k2WIIsK6Ap0Px3bIlzO7bFdGa_XZ1fO-ZhOK6rSJWwZYlNQJAyw29QGptT3PLqMSPT-ZEUhWE1bhSLOrSI1_9QKUKlsQiWK-Ecu_TcZrX4rDL2jYzy04suCIK7wj4e3wWIpXLwUnUxWOyS3rTYSsBu6HKZnc4hPH5CX7mjMv9-U44G0pn5-_GLIkVeIbhk3coPdgPkf2K4-I");'>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-6 p-6 md:p-10">
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight mb-3">Онлайн-консультация</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
+                                    Полноценная терапевтическая сессия в удобном для вас месте через Zoom, Skype или Telegram. Доступно из любой точки мира.
+                                </p>
+<div class="flex flex-wrap gap-4 text-sm font-medium text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">schedule</span> 50 минут</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">payments</span> 5 000 ₽</span>
+</div>
+</div>
+<button class="w-fit flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary text-slate-900 text-sm font-bold transition-all hover:scale-[1.02]">
+                                Выбрать время
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Preparation Section -->
+<section class="bg-primary/5 dark:bg-primary/10 py-20 px-6 md:px-20 lg:px-40">
+<div class="max-w-[1000px] mx-auto">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-10 text-center">Как подготовиться к первой сессии?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">edit_note</span>
+<h4 class="font-bold text-lg mb-3">Сформулируйте запрос</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Подумайте, что вас беспокоит сейчас больше всего. Даже если это просто «чувствую себя не на своем месте» — это отличная точка входа.
+                            </p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">nest_remote_comfort_sensor</span>
+<h4 class="font-bold text-lg mb-3">Удобное пространство</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Для онлайн-сессии выберите место, где вас никто не побеспокоит. Приготовьте воду, салфетки и блокнот для записей.
+                            </p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">favorite</span>
+<h4 class="font-bold text-lg mb-3">Будьте собой</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                На сессии нет «правильных» или «неправильных» слов. Главное — ваша искренность и готовность к исследованию себя.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-6 md:px-20 lg:px-40 text-center">
+<div class="max-w-[600px] mx-auto">
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-100 mb-6">Готовы сделать первый шаг?</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-10 text-lg">
+                        Первая встреча поможет нам познакомиться, обсудить ваши ожидания и наметить план совместной работы.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-slate-900 font-bold text-base transition-all hover:shadow-lg hover:shadow-primary/20">
+                            Записаться сейчас
+                        </button>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 border-2 border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 font-bold text-base hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                            Задать вопрос
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 px-6 md:px-20 lg:px-40 py-12 bg-white dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h2 class="text-lg font-bold leading-tight">Психолог</h2>
+</div>
+<div class="flex gap-8 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="hover:text-primary transition-colors" href="#">Оферта</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<p class="mt-8 text-center text-xs text-slate-400">© 2026 Все права защищены. Консультации проводятся дипломированным специалистом.</p>
+</footer>
+</div>
+</div>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body></html>

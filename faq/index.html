@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>FAQ - Психологическая помощь</title>
+<meta name="description" content="Часто задаваемые вопросы о психологической помощи — как проходит консультация, сколько встреч нужно."/>
+<meta property="og:title" content="FAQ — Психологическая помощь"/>
+<meta property="og:description" content="Ответы на частые вопросы о консультациях психолога."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/faq/"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="../index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../about/index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../services/index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../blog/index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../reviews/index.html">Отзывы</a>
+<a class="text-primary font-bold transition-colors" href="index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="../booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../about/index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../services/index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../blog/index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a>
+<a class="block text-sm text-primary font-bold" href="index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="../booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex flex-1 justify-center py-10 px-4">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col gap-6 p-4">
+<div class="flex flex-col gap-3">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em]">Часто задаваемые вопросы</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal max-w-2xl">
+                                Здесь собраны ответы на самые популярные вопросы о психотерапии. Если вы не нашли нужную информацию, я всегда готова ответить вам лично.
+                            </p>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-4">
+<details class="flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 py-4 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Сколько сессий мне понадобится?</p>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed pt-3 mt-3 bg-slate-50/80 dark:bg-slate-800/40 rounded-xl -mx-1 px-3 py-2">
+                                Количество сессий индивидуально и зависит от вашего запроса. Для решения конкретной локальной проблемы может быть достаточно 5-10 встреч (краткосрочная терапия). Для глубокой проработки личностных особенностей и устойчивых изменений в жизни обычно требуется длительная терапия от полугода и дольше. Мы обсудим примерный план на первой встрече.
+                            </div>
+</details>
+<details class="flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 py-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">В чем разница между психологом и другом?</p>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed pt-3 mt-3 bg-slate-50/80 dark:bg-slate-800/40 rounded-xl -mx-1 px-3 py-2">
+                                Психолог — это нейтральный специалист с профессиональной подготовкой. В отличие от друга, психолог не дает советов на основе личного опыта, не оценивает ваши поступки и полностью сосредоточен на вас. Терапия создает безопасное пространство, где соблюдается профессиональная этика и конфиденциальность, а внимание направлено исключительно на ваше благополучие.
+                            </div>
+</details>
+<details class="flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 py-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Как проходит первая встреча?</p>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed pt-3 mt-3 bg-slate-50/80 dark:bg-slate-800/40 rounded-xl -mx-1 px-3 py-2">
+                                Первая сессия — это знакомство. Мы обсудим ваш запрос, то, что вас беспокоит сейчас, и какой результат вы хотели бы получить. Я расскажу о своем методе работы, а вы сможете почувствовать, насколько вам комфортно со мной общаться. Это важный этап для установления доверительного контакта.
+                            </div>
+</details>
+<details class="flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 py-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Конфиденциальны ли наши беседы?</p>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed pt-3 mt-3 bg-slate-50/80 dark:bg-slate-800/40 rounded-xl -mx-1 px-3 py-2">
+                                Да, полная конфиденциальность — это основа моей работы и этический стандарт. Все, что вы рассказываете на сессии, остается исключительно между нами. Исключение составляют только ситуации, предусмотренные законодательством (угроза вашей жизни или жизни других людей), о чем я обязательно предупреждаю заранее.
+                            </div>
+</details>
+<details class="flex flex-col rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 px-6 py-4 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Как понять, что мне нужен психолог?</p>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed pt-3 mt-3 bg-slate-50/80 dark:bg-slate-800/40 rounded-xl -mx-1 px-3 py-2">
+                                Если вы чувствуете, что привычные способы справляться с трудностями не работают, если вас беспокоит подавленное настроение, тревога, проблемы в отношениях или просто есть ощущение, что "что-то не так" — это уже повод обратиться за поддержкой. Психолог помогает не только в кризисе, но и в желании лучше узнать себя.
+                            </div>
+</details>
+</div>
+<section class="mt-12 p-8 rounded-2xl bg-primary/10 dark:bg-primary/5 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-8 mx-4">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Остались вопросы?</h2>
+<p class="text-slate-600 dark:text-slate-400">Напишите мне, и я постараюсь ответить вам в течение дня.</p>
+</div>
+<div class="flex flex-wrap gap-4 justify-center">
+<a class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-50 transition-colors" href="https://t.me/example">
+<span class="material-symbols-outlined text-blue-500">send</span>
+                                Telegram
+                            </a>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">mail</span>
+                                Написать письмо
+                            </button>
+</div>
+</section>
+</div>
+</main>
+<footer class="mt-auto py-10 px-10 border-t border-slate-200 dark:border-slate-800 text-center">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-center gap-2 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span class="font-bold">Психологическая помощь</span>
+</div>
+<p class="text-slate-500 text-xs">© 2026 Все права защищены. Консультации проводятся дипломированным специалистом.</p>
+</div>
+</footer>
+</div>
+</div>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body></html>

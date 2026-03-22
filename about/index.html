@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+<title>Обо мне | Психолог</title>
+<meta name="description" content="Обо мне — образование, опыт и подход к психологической работе. Психолог в Ставрополе."/>
+<meta property="og:title" content="Обо мне | Психолог"/>
+<meta property="og:description" content="Образование, опыт и подход к психологической работе."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/about/"/>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="../index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../index.html">Главная</a>
+<a class="text-primary font-bold transition-colors" href="index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../services/index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../blog/index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../reviews/index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="../booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../index.html">Главная</a>
+<a class="block text-sm text-primary font-bold" href="index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../services/index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../blog/index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="../booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex-grow">
+<div class="max-w-[960px] mx-auto px-4 py-12">
+<section class="flex flex-col md:flex-row gap-12 items-start mb-16">
+<div class="w-full md:w-1/3 flex flex-col gap-4">
+<div class="bg-slate-200 dark:bg-slate-800 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-cover bg-center" role="img" aria-label="Портрет психолога в студии с лёгкой улыбкой" data-alt="Portrait of a female professional psychologist smiling in a studio" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuav4tZo3mx8zH37I9slhIIJCKIVLrBuHKfU4fTvw00v8NnmOeHbccSy_NrGVBLsZXgx3moRpyUQ-AgXE8qQTURBEFV1Ds0GidUrB_OHWR4J3CQWnhPX-64AQlp-v07zu7CZkA8G7UB7Kk-XtOGMFc98W8dDS8Gk_oaj4T0bXr7xzF5X9KO7qdpI_VcdFfGky8Tk7Pn2AnVqDfEOiHFocuC0xtJy3J7vbJciFKiis9FzDhrvHFqN88shRFQ4myhFzbKNqOw5_qj7w');">
+</div>
+<div class="bg-primary/10 p-6 rounded-2xl border border-primary/20">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-2">Мария Иванова</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Клинический психолог, гештальт-терапевт. Член ассоциации психотерапевтов.</p>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-100 mb-6">Обо мне</h1>
+<div class="space-y-4 text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+<p>Здравствуйте! Рада, что вы здесь. Я верю, что каждый человек обладает внутренними ресурсами для того, чтобы справиться с любыми жизненными вызовами, но иногда нам нужен проводник, чтобы найти к ним путь.</p>
+<p>Моя профессиональная деятельность началась более 10 лет назад. За это время я помогла сотням клиентов преодолеть кризисные ситуации, наладить отношения с близкими и, что самое важное, обрести внутреннюю гармонию и уверенность.</p>
+<p>В своей работе я сочетаю академические знания клинической психологии с человечным и бережным подходом гештальт-терапии. Моя цель — создать для вас безопасное, свободное от суждений пространство, где вы сможете быть собой.</p>
+</div>
+</div>
+</section>
+<section class="mb-16 bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+                        Образование и квалификация
+                    </h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="mt-1 h-3 w-3 rounded-full bg-primary flex-shrink-0"></div>
+<div>
+<h4 class="font-bold text-lg">МГУ им. М.В. Ломоносова</h4>
+<p class="text-slate-600 dark:text-slate-400 italic">Специальность: Клиническая психология (Магистратура)</p>
+<p class="text-sm mt-1 text-slate-500">2008 — 2014</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 h-3 w-3 rounded-full bg-primary flex-shrink-0"></div>
+<div>
+<h4 class="font-bold text-lg">Московский Гештальт Институт (МГИ)</h4>
+<p class="text-slate-600 dark:text-slate-400 italic">Сертифицированный гештальт-терапевт (II ступень)</p>
+<p class="text-sm mt-1 text-slate-500">2015 — 2018</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 h-3 w-3 rounded-full bg-primary flex-shrink-0"></div>
+<div>
+<h4 class="font-bold text-lg">Курс «Когнитивно-поведенческая терапия депрессии»</h4>
+<p class="text-slate-600 dark:text-slate-400 italic">Повышение квалификации, АКПП</p>
+<p class="text-sm mt-1 text-slate-500">2020</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                        Принципы и подходы
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+<h4 class="font-bold text-lg mb-2">Конфиденциальность</h4>
+<p class="text-slate-700 dark:text-slate-400">Всё, что происходит на сессии, остается только между нами. Это фундамент доверия и безопасности процесса.</p>
+</div>
+<div class="p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+<h4 class="font-bold text-lg mb-2">Этический кодекс</h4>
+<p class="text-slate-700 dark:text-slate-400">Я строго следую стандартам РПО. Регулярно прохожу личную терапию и супервизию для качества работы.</p>
+</div>
+<div class="p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+<h4 class="font-bold text-lg mb-2">Индивидуальность</h4>
+<p class="text-slate-700 dark:text-slate-400">Я не использую готовые шаблоны. Каждый человек уникален, и мой подход адаптируется под ваши цели и темп.</p>
+</div>
+<div class="p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+<h4 class="font-bold text-lg mb-2">Научный подход</h4>
+<p class="text-slate-700 dark:text-slate-400">В практике использую только методы с доказанной эффективностью и современную научную базу.</p>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">card_membership</span>
+                        Дипломы и сертификаты
+                    </h2>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4">
+<div class="aspect-[1/1.414] bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-300 dark:border-slate-700 flex items-center justify-center p-2 group cursor-pointer hover:border-primary transition-all">
+<div class="w-full h-full bg-white dark:bg-slate-700 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-slate-400 text-4xl mb-2">description</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Диплом МГУ</span>
+</div>
+</div>
+<div class="aspect-[1/1.414] bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-300 dark:border-slate-700 flex items-center justify-center p-2 group cursor-pointer hover:border-primary transition-all">
+<div class="w-full h-full bg-white dark:bg-slate-700 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-slate-400 text-4xl mb-2">description</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Сертификат МГИ</span>
+</div>
+</div>
+<div class="aspect-[1/1.414] bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-300 dark:border-slate-700 flex items-center justify-center p-2 group cursor-pointer hover:border-primary transition-all">
+<div class="w-full h-full bg-white dark:bg-slate-700 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-slate-400 text-4xl mb-2">description</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">АКПП Курс</span>
+</div>
+</div>
+<div class="aspect-[1/1.414] bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-300 dark:border-slate-700 flex items-center justify-center p-2 group cursor-pointer hover:border-primary transition-all">
+<div class="w-full h-full bg-white dark:bg-slate-700 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-slate-400 text-4xl mb-2">description</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Повышение квалификации</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary/20 p-10 rounded-3xl text-center">
+<h2 class="text-3xl font-bold mb-4">Готовы начать работу?</h2>
+<p class="text-slate-700 dark:text-slate-300 mb-8 max-w-lg mx-auto">Первая встреча — это знакомство, где мы обсудим ваш запрос и поймем, подходим ли мы друг другу.</p>
+<button class="bg-primary hover:opacity-90 text-slate-900 font-bold py-4 px-10 rounded-xl transition-all shadow-md">
+                        Записаться на консультацию
+                    </button>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+          <div>
+            <span class="text-white text-lg font-bold font-display tracking-tight">Психолог</span>
+            <span class="block text-xs text-primary/80">Ставрополь</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Профессиональная психологическая помощь. Бережный подход к каждому клиенту.</p>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="../index.html">Главная</a></li>
+          <li><a class="hover:text-primary transition-colors" href="index.html">Обо мне</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../services/index.html">Услуги</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../blog/index.html">Блог</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Contacts -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Контакты</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">phone</span><a class="hover:text-primary transition-colors" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">mail</span><a class="hover:text-primary transition-colors" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>г. Ставрополь</span></li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Соцсети</h4>
+        <div class="flex gap-3">
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="Telegram"><span class="material-symbols-outlined text-lg">send</span></a>
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="WhatsApp"><span class="material-symbols-outlined text-lg">chat</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Психолог. Все права защищены.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary transition-colors" href="../privacy.html">Политика конфиденциальности</a>
+        <a class="hover:text-primary transition-colors" href="../terms.html">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body></html>

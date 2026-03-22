@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Иван Иванов — психолог в Ставрополе</title>
+<meta name="description" content="Психолог в Ставрополе — помощь при тревоге, выгорании, кризисах в отношениях. Очные и онлайн консультации."/>
+<meta property="og:title" content="Психолог в Ставрополе — консультации очно и онлайн"/>
+<meta property="og:description" content="Помогаю справиться с тревогой, выгоранием, кризисами в отношениях и сложными жизненными ситуациями."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                        "accent-blue": "#e0f2fe",
+                        "accent-beige": "#fef3c7",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex min-h-screen flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-primary font-bold transition-colors" href="index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="about/index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="services/index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="blog/index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="reviews/index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm text-primary font-bold" href="index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="about/index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="services/index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="blog/index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="reviews/index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex-grow">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-20 lg:py-32">
+<div class="mx-auto max-w-7xl px-4 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary mb-6">
+<span class="material-symbols-outlined text-sm">verified</span>
+                            Опыт более 5 лет
+                        </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 dark:text-white leading-[1.1]">
+                            Психолог в <span class="text-primary">Ставрополе</span>
+</h1>
+<p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
+                            Помогаю справиться с тревогой, выгоранием, кризисами в отношениях и сложными жизненными ситуациями.
+                        </p>
+<div class="flex flex-wrap gap-4 mb-10">
+<a class="bg-primary text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform" href="booking/index.html">
+                                Записаться на консультацию
+                            </a>
+</div>
+<div class="flex flex-col gap-3 text-sm text-slate-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                                Очные консультации в Ставрополе
+                            </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">videocam</span>
+                                Онлайн по всему миру через видеосвязь
+                            </div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-accent-blue/30">
+<img alt="Современный профессиональный кабинет с мягким освещением и растениями" class="h-full w-full object-cover mix-blend-multiply opacity-90" data-alt="Modern professional office with soft lighting and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8tzWJy3AeABTkQkckZh-T7VQz3muuSl1GRQvOejZ_529qt4h2U_uRZ2sqamjajvdKPeRbbQjRGuNHHtGXjUAw3UhFKpV4uOWTsO_Dz---9KxJk0uBxus-Y2geUuAFbW_M19bVfjt4goyhZP8YunWv_6VzOeQwdiXe6rQ46YD0i9zUsDhISXS2b71Xc54izzlnnf4ctznbrYJTr1sC1RAlrv48KYqLT2g9DhOKRaJV_UFdicHj5Qc9uKpf_7Wh2CD13ya45vXsuEE"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl max-w-[240px]">
+<div class="flex gap-1 text-primary mb-2">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-sm font-medium italic">"Бережный подход и реальные изменения в жизни"</p>
+</div>
+</div>
+</div>
+<!-- Background decor -->
+<div class="absolute top-0 right-0 -z-10 h-full w-1/2 bg-gradient-to-l from-primary/5 to-transparent blur-3xl"></div>
+</section>
+<!-- 'С чем я помогаю' (Services Grid) -->
+<section class="py-24 bg-white dark:bg-slate-900/50">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold mb-4">С чем я помогаю</h2>
+<div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">warning</span>
+<h3 class="text-xl font-bold mb-3">Тревога</h3>
+<p class="text-slate-600 dark:text-slate-400">Работа с паническими атаками, фобиями и постоянным чувством беспокойства.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">battery_low</span>
+<h3 class="text-xl font-bold mb-3">Выгорание</h3>
+<p class="text-slate-600 dark:text-slate-400">Поиск ресурса, работа с хронической усталостью и потерей интереса к работе.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">diversity_1</span>
+<h3 class="text-xl font-bold mb-3">Кризисы отношений</h3>
+<p class="text-slate-600 dark:text-slate-400">Разрешение конфликтов, работа с созависимостью и трудностями в паре.</p>
+</div>
+<!-- Card 4 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">person</span>
+<h3 class="text-xl font-bold mb-3">Самооценка</h3>
+<p class="text-slate-600 dark:text-slate-400">Обретение уверенности, принятие себя и выстраивание личных границ.</p>
+</div>
+<!-- Card 5 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">heart_broken</span>
+<h3 class="text-xl font-bold mb-3">Утрата</h3>
+<p class="text-slate-600 dark:text-slate-400">Бережная поддержка в проживании горя, потери близких или развода.</p>
+</div>
+<!-- Card 6 -->
+<div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">family_restroom</span>
+<h3 class="text-xl font-bold mb-3">Подростки и родители</h3>
+<p class="text-slate-600 dark:text-slate-400">Налаживание контакта, работа с возрастными кризисами и протестами.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 'Обо мне' (About Me) -->
+<section class="py-24" id="about">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-8">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-200 shadow-2xl">
+<img alt="Портрет психолога с лёгкой улыбкой" class="w-full h-full object-cover" data-alt="Professional portrait of a male psychologist smiling gently" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNgmKiqWEasLEib6FTpz3LqStFCWnWxr2J25vEPT5GSbc7n9MDvNAD3FbrbFGZAx4A1OB_dhwGeDJ12zJ1rl6Hfhfb3Q7ohItgUnlB7wgLecJKxMxaLAXuYRGPGJOuiB6EHLI39TJlEWrZERX1w2e5Js6WFaTbcbw4rlkwSyvWyvGQ33NScwFRLRVqOFgRUokbYERuM-zAOvUD7-gNQeOYzembEglBetvLuOjzqDr6XggXR97d3uynn2IOtJKktZOU8CJQKIRmYUY"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-accent-beige/40 p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-slate-800 mb-1">500+</div>
+<div class="text-xs text-slate-500 uppercase">Счастливых клиентов</div>
+</div>
+<div class="bg-accent-blue/40 p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-slate-800 mb-1">3000+</div>
+<div class="text-xs text-slate-500 uppercase">Часов практики</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-4xl font-bold mb-6">Иван Иванов</h2>
+<p class="text-xl font-medium text-primary mb-8 tracking-tight">Ваш проводник к внутреннему спокойствию</p>
+<div class="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+<p><strong>Образование:</strong> Дипломированный психолог (СКФУ), регулярное повышение квалификации в методах КПТ и системной семейной терапии.</p>
+<p><strong>Опыт:</strong> Более 5 лет частной практики и работы в психологических центрах. Работаю со взрослыми и подростками от 14 лет.</p>
+<p><strong>Подход:</strong> Я верю, что у каждого человека есть внутренние ресурсы для преодоления трудностей. Моя задача — помочь вам их обнаружить в безопасной и безоценочной атмосфере.</p>
+</div>
+<div class="mt-10 grid gap-4">
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-medium">Строгая конфиденциальность и этика</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary">chat</span>
+<span class="font-medium">Общение на простом и понятном языке</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary">diversity_3</span>
+<span class="font-medium">Индивидуальный план для каждого</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary">language</span>
+<span class="font-medium">Возможность онлайн-сессий</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 'Как проходит консультация' -->
+<section class="py-24 bg-primary/5">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Как проходит консультация</h2>
+<p class="text-slate-600">Путь к изменениям состоит из простых и понятных шагов</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 relative">
+<div class="hidden md:block absolute top-10 left-[15%] right-[15%] h-0.5 border-t-2 border-dashed border-primary/30"></div>
+<div class="relative z-10 text-center">
+<div class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mx-auto mb-6 shadow-lg border-4 border-primary/20">
+<span class="text-2xl font-black text-primary">01</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Знакомство</h3>
+<p class="text-slate-600 text-sm">Первая встреча для обсуждения вашего запроса и понимания, подходим ли мы друг другу.</p>
+</div>
+<div class="relative z-10 text-center">
+<div class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mx-auto mb-6 shadow-lg border-4 border-primary/20">
+<span class="text-2xl font-black text-primary">02</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Постановка целей</h3>
+<p class="text-slate-600 text-sm">Определяем желаемый результат и частоту встреч (обычно 1 раз в неделю).</p>
+</div>
+<div class="relative z-10 text-center">
+<div class="size-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center mx-auto mb-6 shadow-lg border-4 border-primary/20">
+<span class="text-2xl font-black text-primary">03</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Регулярная работа</h3>
+<p class="text-slate-600 text-sm">Глубокое исследование причин и внедрение новых стратегий поведения.</p>
+</div>
+</div>
+<div class="mt-20 p-8 rounded-2xl bg-white dark:bg-slate-800 border border-primary/10 max-w-3xl mx-auto flex items-start gap-6">
+<span class="material-symbols-outlined text-4xl text-primary">lock</span>
+<div>
+<h4 class="text-lg font-bold mb-2">Принципы конфиденциальности</h4>
+<p class="text-slate-500 text-sm leading-relaxed">Всё, что обсуждается в кабинете, остается строго между нами. Я придерживаюсь профессионального этического кодекса психолога, обеспечивая полную безопасность ваших данных и истории.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 'Услуги и стоимость' -->
+<section class="py-24" id="services">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Услуги и стоимость</h2>
+<div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-primary/50 transition-all">
+<h3 class="text-2xl font-bold mb-2">Индивидуальная работа</h3>
+<p class="text-slate-500 mb-6 italic text-sm">Очно в Ставрополе или Онлайн</p>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="text-4xl font-extrabold">3 000</span>
+<span class="text-xl font-medium text-slate-500">₽ / сессия</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 50 минут встречи</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Поддержка в мессенджерах</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Материалы и упражнения</li>
+</ul>
+<a class="block w-full text-center bg-slate-100 hover:bg-primary py-4 rounded-xl font-bold transition-all" href="#contact">Выбрать формат</a>
+</div>
+<div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-primary/50 transition-all">
+<h3 class="text-2xl font-bold mb-2">Семейная консультация</h3>
+<p class="text-slate-500 mb-6 italic text-sm">Работа с парами</p>
+<div class="flex items-baseline gap-2 mb-8">
+<span class="text-4xl font-extrabold">4 500</span>
+<span class="text-xl font-medium text-slate-500">₽ / сессия</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 80 минут встречи</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Работа с обоими партнерами</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Медиация конфликтов</li>
+</ul>
+<a class="block w-full text-center bg-slate-100 hover:bg-primary py-4 rounded-xl font-bold transition-all" href="#contact">Выбрать формат</a>
+</div>
+</div>
+<p class="text-center mt-12 text-slate-500 text-sm">Остались вопросы? <a class="text-primary font-bold underline decoration-primary/30" href="https://wa.me/#">Напишите мне в WhatsApp</a></p>
+</div>
+</section>
+<!-- 'Отзывы' -->
+<section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="reviews">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-bold mb-4">Отзывы клиентов</h2>
+<p class="text-slate-600 max-w-md">Все отзывы публикуются анонимно и исключительно с добровольного письменного согласия клиента.</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm italic relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4 leading-none">format_quote</span>
+<p class="text-slate-600 dark:text-slate-300 mb-6 relative z-10">"Пришла к Ивану с полным выгоранием. Через 3 месяца работы чувствую, что ко мне вернулся интерес к жизни и работе. Очень бережный специалист."</p>
+<div class="flex items-center gap-3 not-italic">
+<div class="size-10 rounded-full bg-accent-blue flex items-center justify-center font-bold text-slate-700">А</div>
+<div>
+<p class="text-sm font-bold">Анна, 32 года</p>
+<p class="text-xs text-slate-400">Курс терапии: 4 месяца</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm italic relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4 leading-none">format_quote</span>
+<p class="text-slate-600 dark:text-slate-300 mb-6 relative z-10">"Помог пережить сложный развод. Было очень страшно начинать, но Иван создал атмосферу, в которой можно было просто быть собой и говорить о боли."</p>
+<div class="flex items-center gap-3 not-italic">
+<div class="size-10 rounded-full bg-accent-beige flex items-center justify-center font-bold text-slate-700">М</div>
+<div>
+<p class="text-sm font-bold">Марина, 28 лет</p>
+<p class="text-xs text-slate-400">Индивидуальная терапия</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm italic relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4 leading-none">format_quote</span>
+<p class="text-slate-600 dark:text-slate-300 mb-6 relative z-10">"Работаем над самооценкой. Раньше не могла сказать 'нет' на работе, сейчас чувствую себя гораздо увереннее. Благодарю!"</p>
+<div class="flex items-center gap-3 not-italic">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-slate-700">Д</div>
+<div>
+<p class="text-sm font-bold">Дмитрий, 35 лет</p>
+<p class="text-xs text-slate-400">Онлайн-формат</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 'FAQ' -->
+<section class="py-24" id="faq">
+<div class="mx-auto max-w-3xl px-4 lg:px-20">
+<h2 class="text-3xl font-bold mb-12 text-center">Часто задаваемые вопросы</h2>
+<div class="space-y-4">
+<details class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 cursor-pointer">
+<summary class="list-none flex justify-between items-center font-bold">
+                                Сколько встреч мне потребуется?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-slate-500 leading-relaxed">Всё индивидуально. Для решения точечного запроса может хватить 5-10 встреч. Для глубокой проработки личности требуется более длительная работа. Мы обсудим это на первой консультации.</p>
+</details>
+<details class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 cursor-pointer">
+<summary class="list-none flex justify-between items-center font-bold">
+                                Чем это отличается от разговора с другом?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-slate-500 leading-relaxed">Психолог — это нейтральный специалист с набором профессиональных инструментов. Я не даю советов, а помогаю вам найти собственные ответы, используя научные методики.</p>
+</details>
+<details class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 cursor-pointer">
+<summary class="list-none flex justify-between items-center font-bold">
+                                А если мне будет сложно открыться?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-slate-500 leading-relaxed">Это совершенно нормально. Мы будем двигаться в вашем темпе. Не нужно рассказывать всё сразу — доверие выстраивается постепенно.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact & Form Section -->
+<section class="py-24 bg-slate-50/90 dark:bg-slate-950/60" id="contact">
+<div class="mx-auto max-w-7xl px-4 lg:px-20">
+<div class="grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-4xl font-bold mb-8">Записаться на консультацию</h2>
+<p class="text-slate-600 mb-10">Оставьте заявку, и я свяжусь с вами в течение рабочего дня для уточнения деталей и выбора времени.</p>
+<form id="contact-form" class="space-y-5" method="post" action="">
+<div id="form-success" class="hidden rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-semibold text-primary dark:text-primary" role="status" aria-live="polite">
+Спасибо! Заявка отправлена — я свяжусь с вами в ближайшее время.
+</div>
+<div class="grid md:grid-cols-2 gap-5">
+<label class="flex flex-col gap-2" for="contact-name">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Ваше имя</span>
+<input class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-4 bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="contact-name" name="name" placeholder="Например, Анна" type="text" required autocomplete="name"/>
+</label>
+<label class="flex flex-col gap-2" for="contact-phone">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Номер телефона</span>
+<input class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-4 bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="contact-phone" name="phone" placeholder="+7 (900) 000-00-00" type="tel" required pattern="\+?[0-9\s\-\(\)]{10,}" autocomplete="tel"/>
+</label>
+</div>
+<div class="grid md:grid-cols-2 gap-5">
+<label class="flex flex-col gap-2" for="contact-format">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Формат встречи</span>
+<select class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-4 bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="contact-format" name="format" required>
+<option disabled selected value="">Выберите формат</option>
+<option value="offline">Очно в Ставрополе</option>
+<option value="online">Онлайн (Zoom/Telegram)</option>
+</select>
+</label>
+<label class="flex flex-col gap-2" for="contact-messenger">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Предпочтительный мессенджер</span>
+<select class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-4 bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="contact-messenger" name="messenger" required>
+<option disabled selected value="">Выберите способ связи</option>
+<option value="whatsapp">WhatsApp</option>
+<option value="telegram">Telegram</option>
+<option value="call">Звонок</option>
+</select>
+</label>
+</div>
+<label class="flex flex-col gap-2" for="contact-message">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Ваш запрос <span class="font-normal text-slate-500">(необязательно)</span></span>
+<textarea class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-4 bg-slate-50 dark:bg-slate-800 dark:border-slate-700" id="contact-message" name="message" placeholder="Кратко опишите запрос" rows="4"></textarea>
+</label>
+<label class="flex items-start gap-3 cursor-pointer text-sm text-slate-600 dark:text-slate-400" for="contact-consent">
+<input class="mt-1 size-4 shrink-0 rounded border-slate-300 text-primary focus:ring-primary" id="contact-consent" name="consent" type="checkbox" value="yes" required/>
+<span>Соглашаюсь с <a class="text-primary font-medium underline decoration-primary/30 hover:decoration-primary" href="#">политикой конфиденциальности</a> и обработкой персональных данных.</span>
+</label>
+<button class="w-full bg-primary text-slate-900 font-bold py-4 rounded-xl hover:shadow-xl hover:shadow-primary/20 transition-all" type="submit">
+                                    Отправить заявку
+                                </button>
+</form>
+</div>
+<div class="space-y-10">
+<div>
+<h3 class="text-xl font-bold mb-6">Контакты</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-slate-600">
+<span class="material-symbols-outlined text-primary">call</span>
+<a class="hover:text-primary font-medium" href="tel:+79991234567">+7 (999) 123-45-67</a>
+</div>
+<div class="flex items-center gap-4 text-slate-600">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a class="hover:text-primary" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a>
+</div>
+<div class="flex items-center gap-4 text-slate-600">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>г. Ставрополь, ул. Мира, 123, офис 45</span>
+</div>
+<div class="flex items-center gap-4 text-slate-600">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span>Пн-Пт: 09:00 – 20:00, Сб: 10:00 – 16:00</span>
+</div>
+</div>
+</div>
+<div class="h-64 rounded-2xl overflow-hidden bg-slate-100 grayscale hover:grayscale-0 transition-all shadow-inner">
+<div class="w-full h-full flex items-center justify-center bg-slate-200" data-location="Stavropol" style="">
+<span class="material-symbols-outlined text-slate-400 text-4xl mb-2">map</span>
+<p class="text-xs text-slate-500 font-medium">Карта (Ставрополь)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+          <div>
+            <span class="text-white text-lg font-bold font-display tracking-tight">Психолог</span>
+            <span class="block text-xs text-primary/80">Ставрополь</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Профессиональная психологическая помощь. Бережный подход к каждому клиенту.</p>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Главная</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about/index.html">Обо мне</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services/index.html">Услуги</a></li>
+          <li><a class="hover:text-primary transition-colors" href="blog/index.html">Блог</a></li>
+          <li><a class="hover:text-primary transition-colors" href="reviews/index.html">Отзывы</a></li>
+          <li><a class="hover:text-primary transition-colors" href="faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Contacts -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Контакты</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">phone</span><a class="hover:text-primary transition-colors" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">mail</span><a class="hover:text-primary transition-colors" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>г. Ставрополь</span></li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Соцсети</h4>
+        <div class="flex gap-3">
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="Telegram"><span class="material-symbols-outlined text-lg">send</span></a>
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="WhatsApp"><span class="material-symbols-outlined text-lg">chat</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Психолог. Все права защищены.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary transition-colors" href="privacy.html">Политика конфиденциальности</a>
+        <a class="hover:text-primary transition-colors" href="terms.html">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+(function () {
+  var form = document.getElementById('contact-form');
+  var success = document.getElementById('form-success');
+  if (!form || !success) return;
+  var hideTimer;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    success.classList.remove('hidden');
+    form.reset();
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(function () {
+      success.classList.add('hidden');
+    }, 5000);
+  });
+})();
+</script>
+</body></html>

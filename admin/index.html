@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminous Moss Admin - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#fef3c7",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffd8e8",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#e0f2fe",
+              "on-secondary": "#062100",
+              "on-secondary-container": "#297104",
+              "on-secondary-fixed": "#062100",
+              "surface-container-low": "#f6f8f6",
+              "on-surface-variant": "#3e4a36",
+              "on-primary-fixed-variant": "#1a5200",
+              "background": "#f6f8f6",
+              "secondary-container": "#a4f47e",
+              "secondary-fixed": "#a7f780",
+              "on-error-container": "#93000a",
+              "surface-variant": "#dce6d1",
+              "surface-tint": "#256d00",
+              "secondary-fixed-dim": "#8cda67",
+              "tertiary-fixed-dim": "#fbb1d5",
+              "primary-fixed": "#7dff44",
+              "primary": "#256d00",
+              "outline": "#6e7b64",
+              "outline-variant": "#bdcbb0",
+              "on-primary-container": "#062100",
+              "inverse-on-surface": "#ebf4df",
+              "secondary": "#5de619",
+              "surface-bright": "#ffffff",
+              "on-tertiary": "#075985",
+              "inverse-primary": "#59e212",
+              "surface-container": "#edf1ed",
+              "inverse-surface": "#162111",
+              "surface-dim": "#d4ddc9",
+              "on-secondary-fixed-variant": "#1a5200",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#370825",
+              "primary-fixed-dim": "#59e212",
+              "surface-container-highest": "#dce6d1",
+              "on-tertiary-fixed-variant": "#6c3452",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e2ebd7",
+              "on-surface": "#0f170a",
+              "primary-container": "#5de619",
+              "on-primary-fixed": "#062100",
+              "on-background": "#0f170a",
+              "surface": "#f6f8f6",
+              "on-tertiary-container": "#92400e",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+<script src="auth-guard.js"></script>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 h-screen w-64 border-r border-outline-variant/40 dark:border-slate-800 bg-surface-container-low dark:bg-slate-900 font-manrope antialiased text-sm shadow-sm z-50">
+<div class="mb-8 px-4 py-2">
+<h1 class="text-xl font-bold tracking-tight text-lime-700 dark:text-lime-300">Центр Психологии</h1>
+<p class="text-xs text-slate-500 mt-1">Администратор клиники</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-lime-100/50 dark:bg-lime-900/30 text-lime-700 dark:text-lime-300 font-bold" href="index.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Дашборд</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="content.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary" data-icon="edit_note">edit_note</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Контент-менеджер</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="blog.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary" data-icon="video_library">video_library</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Блог и медиа</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="services.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary" data-icon="payments">payments</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Услуги и цены</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="reviews-faq.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary" data-icon="rate_review">rate_review</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Отзывы и FAQ</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="leads.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary" data-icon="contact_mail">contact_mail</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Заявки клиентов</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200 pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Настройки</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#" onclick="sessionStorage.clear();window.location.replace('login.html');return false;">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Выйти</span>
+</a>
+<div class="mt-4 px-4">
+<a class="block w-full py-2 bg-primary text-on-primary rounded-full text-xs font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform text-center" href="../index.html">Перейти на сайт</a>
+</div>
+</div>
+</aside>
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+<!-- TopNavBar -->
+<header class="flex items-center h-16 px-4 md:px-8 ml-0 md:ml-64 w-full md:w-[calc(100%-16rem)] bg-white/80 dark:bg-slate-950/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100 dark:border-slate-800 font-manrope text-sm gap-2">
+<div class="flex items-center gap-2 flex-1 min-w-0 basis-0">
+<button type="button" id="sidebar-toggle" class="md:hidden p-2 -ml-1 rounded-xl text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 shrink-0" aria-label="Меню"><span class="material-symbols-outlined">menu</span></button>
+<div class="relative flex-1 min-w-0 max-w-xs lg:max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-lime-500/20 text-sm" placeholder="Поиск по панели..." type="text"/>
+</div>
+</div>
+<p class="shrink-0 font-bold text-slate-800 dark:text-slate-100 text-sm text-center px-2 truncate max-w-[120px] xs:max-w-[180px] sm:max-w-none">Дашборд</p>
+<div class="flex items-center justify-end gap-2 md:gap-6 flex-1 basis-0 min-w-0">
+<button type="button" class="text-slate-500 hover:text-lime-600 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button type="button" class="text-slate-500 hover:text-lime-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1 md:mx-2 shrink-0 hidden sm:block"></div>
+<div class="flex items-center gap-2 md:gap-3 shrink-0">
+<div class="text-right hidden sm:block">
+<p class="font-bold text-slate-800 leading-none">Admin</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter mt-1">Clinical Lead</p>
+</div>
+<img alt="Psychologist Admin Profile" class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-lime-100 object-cover" data-alt="Professional clinical psychologist headshot profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnhTgF6Xs0XTIgXTq3P9RBcFqm4iw7r2f3b4d_-hC7VQuQc2XvImNc7GEuTfGlgYCgU3SAz-mK4NLZwHVR4B-yIVNZMAIIBIb4oHCJCGhmt0oRPjHglTLu2rsYb3xJoXlf5OEf_-lHmEbvN6n7C7qsPAHtXn8wo7dNoRE3zp-AoyOybZ12cSc10q-hkz7Cynnr7JWCkOBTOEahbE_Y6078x_YCTu5SoDc4Iq7PQ4NKjiB3l1wI9Rsr3UzUY6uCkgD_roUwzXKj7oA"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-0 md:ml-64 p-8 min-h-[calc(100vh-4rem)]">
+<!-- Welcome Header -->
+<header class="mb-10">
+<h2 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-2">Добро пожаловать, Admin</h2>
+<p class="text-slate-500 text-lg">Вот обзор того, что произошло в вашей клинике сегодня.</p>
+</header>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-surface-bright p-6 rounded-3xl shadow-sm border border-slate-50 flex items-center justify-between group hover:shadow-lg transition-all">
+<div>
+<p class="text-sm font-semibold text-slate-500 mb-1">Всего запросов</p>
+<h3 class="text-3xl font-bold text-primary">24</h3>
+<p class="text-xs text-lime-600 font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                        +12% с прошлой недели
+                    </p>
+</div>
+<div class="w-14 h-14 bg-lime-50 rounded-2xl flex items-center justify-center text-lime-600 group-hover:bg-lime-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="inbox">inbox</span>
+</div>
+</div>
+<div class="bg-surface-bright p-6 rounded-3xl shadow-sm border border-slate-50 flex items-center justify-between group hover:shadow-lg transition-all">
+<div>
+<p class="text-sm font-semibold text-slate-500 mb-1">Статей в блоге</p>
+<h3 class="text-3xl font-bold text-slate-800">142</h3>
+<p class="text-xs text-slate-400 mt-2">5 опубликовано в этом месяце</p>
+</div>
+<div class="w-14 h-14 bg-tertiary rounded-2xl flex items-center justify-center text-on-tertiary group-hover:bg-on-tertiary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="article">article</span>
+</div>
+</div>
+<div class="bg-surface-bright p-6 rounded-3xl shadow-sm border border-slate-50 flex items-center justify-between group hover:shadow-lg transition-all">
+<div>
+<p class="text-sm font-semibold text-slate-500 mb-1">Ожидают проверки</p>
+<h3 class="text-3xl font-bold text-error">7</h3>
+<p class="text-xs text-error font-bold mt-2">Требуется ваше внимание</p>
+</div>
+<div class="w-14 h-14 bg-error-container rounded-2xl flex items-center justify-center text-on-error-container group-hover:bg-error group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="pending_actions">pending_actions</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Recent Inquiries Table -->
+<section class="lg:col-span-2 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-slate-900">Последние запросы</h3>
+<a class="text-sm font-bold text-lime-700 hover:underline" href="leads.html">Смотреть все</a>
+</div>
+<div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+<table class="w-full text-left">
+<thead class="bg-slate-50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4">Дата</th>
+<th class="px-6 py-4">Имя</th>
+<th class="px-6 py-4">Услуга</th>
+<th class="px-6 py-4">Статус</th>
+<th class="px-6 py-4 text-right">Действие</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-sm">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 font-medium">12.05.2024</td>
+<td class="px-6 py-4">Анна Петрова</td>
+<td class="px-6 py-4 text-slate-600">Личная терапия</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-[11px] font-bold">НОВЫЙ</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button type="button" class="text-slate-400 hover:text-primary transition-colors" aria-label="Действия">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 font-medium">11.05.2024</td>
+<td class="px-6 py-4">Иван Сидоров</td>
+<td class="px-6 py-4 text-slate-600">Семейная консультация</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[11px] font-bold">СВЯЗАЛИСЬ</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button type="button" class="text-slate-400 hover:text-primary transition-colors" aria-label="Действия">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4 font-medium">10.05.2024</td>
+<td class="px-6 py-4">Мария К.</td>
+<td class="px-6 py-4 text-slate-600">Групповая терапия</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-[11px] font-bold">НОВЫЙ</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button type="button" class="text-slate-400 hover:text-primary transition-colors" aria-label="Действия">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Recent Blog Posts -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-slate-900">Блог</h3>
+<button class="p-2 bg-lime-100 text-lime-700 rounded-xl hover:bg-lime-200 transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Blog Card 1 -->
+<div class="bg-surface-bright p-4 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-xl bg-slate-200 overflow-hidden flex-shrink-0">
+<img alt="Blog post thumbnail" class="w-full h-full object-cover" data-alt="Calm nature scene with yoga mat for wellness blog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdmJ-TisQtCgxccw5VvDQC4CXwMe-JX8NxslIzGX_dL73x5xjDz7XlmmnxMlDsKzLV59ATw47X9vQM_pm5eRW-dhYQx8pySmz6wW7QRs3J1N3ZTI0-W2b7m4liqHZmvBCfnc5CVUSybOeQjd2zoGriGUDcb9BsyvOFIdc2Gnxq8V4I4CPLGp-xAIps-BezVk-gVasgGGJVsnMYjCZDqDArzvTl_4kKSgSYdcmVRMAFcmomkWXqAtDJq7ee8v1q0ae8qFtyF-_fHOQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-slate-800 text-sm truncate">Как справиться с тревожностью...</h4>
+<p class="text-xs text-slate-500 mt-1">Опубликовано вчера</p>
+<div class="flex gap-2 mt-3">
+<button class="flex items-center gap-1 text-[11px] font-bold text-slate-600 hover:text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                                        Изм.
+                                    </button>
+<button class="flex items-center gap-1 text-[11px] font-bold text-slate-600 hover:text-error">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+                                        Удал.
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Blog Card 2 -->
+<div class="bg-surface-bright p-4 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-xl bg-slate-200 overflow-hidden flex-shrink-0">
+<img alt="Blog post thumbnail" class="w-full h-full object-cover" data-alt="Person meditating in peaceful environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA87NrTmzOdPP6UHsZItTF4fh7cgpMlds1hUiQ7-X72Gcak86OPJ886-nPF64Wp_zJEaREbXjadgM-uzrmCuOtJd5rkOY8rzmwOZyuqUUcksUGAmRtEKpz2sIBld82lDrWZa5-cARg7zppvn7RzkR7NdNnmELJP17CZQ45V8B1zonYnAcOHNi-6PWoEpOcCcdchjMcSPJpbzGRal3eZeVFTg3rnofSte5rEQYCWvSDsHHuUjkgsnH-W7fpdtXgELjt6v_LXHvXU5-g"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-slate-800 text-sm truncate">Границы в отношениях</h4>
+<p class="text-xs text-slate-500 mt-1">Опубликовано 3 дня назад</p>
+<div class="flex gap-2 mt-3">
+<a href="blog.html" class="inline-flex items-center gap-1 text-[11px] font-bold text-slate-600 hover:text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                                        Изм.
+                                    </a>
+<button type="button" class="flex items-center gap-1 text-[11px] font-bold text-slate-600 hover:text-error" onclick="if(!confirm('Удалить статью?')) return false;">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+                                        Удал.
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Secondary Overview Layer (Tonal Shift) -->
+<section class="mt-12 p-8 bg-surface-container-low rounded-[2rem] border border-slate-100/50">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 space-y-4">
+<h3 class="text-2xl font-bold text-slate-900">Ваше расписание на сегодня</h3>
+<p class="text-slate-600 leading-relaxed">У вас 4 запланированные сессии сегодня. Первая начнется в 10:00 с Анной Петровой.</p>
+<a href="#" onclick="alert('Календарь будет доступен после интеграции'); return false;" class="px-6 py-3 bg-secondary-container text-on-secondary-container font-bold rounded-2xl hover:scale-105 transition-transform flex items-center gap-2 inline-flex">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                        Открыть календарь
+                    </a>
+</div>
+<div class="w-full md:w-1/3 grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-white">
+<span class="block text-2xl font-black text-lime-600">4</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Сессии</span>
+</div>
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-white">
+<span class="block text-2xl font-black text-lime-600">2</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Перерыва</span>
+</div>
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-white">
+<span class="block text-2xl font-black text-lime-600">1</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Группа</span>
+</div>
+<div class="bg-white p-4 rounded-2xl shadow-sm border border-white">
+<span class="block text-2xl font-black text-lime-600">0</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">Отмен</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+const sidebar = document.getElementById('admin-sidebar');
+const toggle = document.getElementById('sidebar-toggle');
+const overlay = document.getElementById('sidebar-overlay');
+if (toggle && sidebar && overlay) {
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+}
+</script>
+</body></html>

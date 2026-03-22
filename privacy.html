@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Политика конфиденциальности | Психолог</title>
+<meta name="description" content="Политика конфиденциальности сайта психолога: обработка персональных данных, хранение и права пользователей. Текст будет уточнён перед запуском."/>
+<meta property="og:title" content="Политика конфиденциальности | Психолог"/>
+<meta property="og:description" content="Информация о конфиденциальности и обработке персональных данных на сайте."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/privacy.html"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                        "accent-blue": "#e0f2fe",
+                        "accent-beige": "#fef3c7",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex min-h-screen flex-col">
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="about/index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="services/index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="blog/index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="reviews/index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="about/index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="services/index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="blog/index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="reviews/index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex-grow">
+<div class="max-w-3xl mx-auto px-4 py-16">
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Политика конфиденциальности</h1>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-10">Ниже приведён черновой текст-заглушка. Перед официальным запуском сайта он будет заменён на актуальную политику конфиденциальности, согласованную с юристом и применимым законодательством.</p>
+<section class="mb-10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Сбор данных</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Здесь будет описано, какие персональные данные могут собираться при использовании сайта и форм обратной связи (например, имя, контакты, технические данные). Текст уточняется.</p>
+</section>
+<section class="mb-10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Использование данных</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Здесь будет указано, в каких целях обрабатываются данные (связь с клиентом, запись на консультацию, аналитика и т.д.). Текст уточняется.</p>
+</section>
+<section class="mb-10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Хранение данных</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Здесь будет описан срок и способ хранения информации, меры защиты и передача третьим лицам (если применимо). Текст уточняется.</p>
+</section>
+<section class="mb-10">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Права пользователя</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Здесь будет перечислено, как пользователь может запросить доступ, исправление или удаление данных, а также отозвать согласие. Текст уточняется.</p>
+</section>
+</div>
+</main>
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+          <div>
+            <span class="text-white text-lg font-bold font-display tracking-tight">Психолог</span>
+            <span class="block text-xs text-primary/80">Ставрополь</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Профессиональная психологическая помощь. Бережный подход к каждому клиенту.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Главная</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about/index.html">Обо мне</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services/index.html">Услуги</a></li>
+          <li><a class="hover:text-primary transition-colors" href="blog/index.html">Блог</a></li>
+          <li><a class="hover:text-primary transition-colors" href="reviews/index.html">Отзывы</a></li>
+          <li><a class="hover:text-primary transition-colors" href="faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Контакты</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">phone</span><a class="hover:text-primary transition-colors" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">mail</span><a class="hover:text-primary transition-colors" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>г. Ставрополь</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Соцсети</h4>
+        <div class="flex gap-3">
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="Telegram"><span class="material-symbols-outlined text-lg">send</span></a>
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="WhatsApp"><span class="material-symbols-outlined text-lg">chat</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Психолог. Все права защищены.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary transition-colors" href="privacy.html">Политика конфиденциальности</a>
+        <a class="hover:text-primary transition-colors" href="terms.html">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body></html>

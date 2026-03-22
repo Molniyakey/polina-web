@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Вход в панель администратора</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f6f8f6",
+              "on-surface-variant": "#3e4a36",
+              "background": "#f6f8f6",
+              "secondary": "#5de619",
+              "primary": "#256d00",
+              "outline": "#6e7b64",
+              "outline-variant": "#bdcbb0",
+              "surface-bright": "#ffffff",
+              "surface-container": "#edf1ed",
+              "on-surface": "#0f170a",
+              "on-background": "#0f170a",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        20%, 60% { transform: translateX(-6px); }
+        40%, 80% { transform: translateX(6px); }
+    }
+    .shake { animation: shake 0.4s ease-in-out; }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center p-4">
+
+<div class="w-full max-w-md">
+    <div class="bg-surface-bright rounded-3xl shadow-xl shadow-primary/5 border border-outline-variant/30 p-8 md:p-10">
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-white text-3xl">shield_lock</span>
+            </div>
+            <h1 class="font-headline text-2xl font-extrabold text-on-surface tracking-tight">Панель администратора</h1>
+            <p class="text-on-surface-variant text-sm mt-2">Введите логин и пароль для входа</p>
+        </div>
+
+        <form id="login-form" class="space-y-5" novalidate>
+            <div>
+                <label for="login-username" class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Логин</label>
+                <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-xl pointer-events-none">person</span>
+                    <input
+                        id="login-username"
+                        name="username"
+                        type="text"
+                        required
+                        autocomplete="username"
+                        placeholder="Введите логин"
+                        class="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/50 rounded-xl text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                    />
+                </div>
+            </div>
+
+            <div>
+                <label for="login-password" class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Пароль</label>
+                <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-xl pointer-events-none">lock</span>
+                    <input
+                        id="login-password"
+                        name="password"
+                        type="password"
+                        required
+                        autocomplete="current-password"
+                        placeholder="Введите пароль"
+                        class="w-full pl-11 pr-11 py-3 bg-surface-container-low border border-outline-variant/50 rounded-xl text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                    />
+                    <button type="button" id="toggle-password" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" aria-label="Показать пароль">
+                        <span class="material-symbols-outlined text-xl">visibility</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="login-error" class="hidden bg-error-container text-on-error-container text-sm font-medium px-4 py-3 rounded-xl flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">error</span>
+                <span>Неверный логин или пароль</span>
+            </div>
+
+            <button
+                type="submit"
+                id="login-submit"
+                class="w-full py-3.5 bg-primary hover:bg-primary/90 text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-200 flex items-center justify-center gap-2 text-sm"
+            >
+                <span class="material-symbols-outlined text-lg">login</span>
+                Войти
+            </button>
+        </form>
+    </div>
+
+    <p class="text-center text-xs text-outline mt-6">
+        <a href="../index.html" class="hover:text-primary transition-colors inline-flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            Вернуться на сайт
+        </a>
+    </p>
+</div>
+
+<script>
+(function () {
+    // SHA-256 hash of "admin" (username) and "admin123" (password)
+    // To change credentials, update these hashes.
+    // Generate new hash: in browser console run:
+    //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('your_password'))
+    //     .then(b => console.log(Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join('')))
+    var VALID_USERNAME_HASH = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // sha256("admin")
+    var VALID_PASSWORD_HASH = "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"; // sha256("admin123")
+
+    var AUTH_KEY = "admin_auth_token";
+    var AUTH_TS = "admin_auth_ts";
+
+    var form = document.getElementById("login-form");
+    var errorEl = document.getElementById("login-error");
+    var submitBtn = document.getElementById("login-submit");
+    var passwordInput = document.getElementById("login-password");
+    var toggleBtn = document.getElementById("toggle-password");
+
+    // If already authenticated, go straight to dashboard
+    if (sessionStorage.getItem(AUTH_KEY) && sessionStorage.getItem(AUTH_TS)) {
+        window.location.replace("index.html");
+        return;
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        var isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        toggleBtn.querySelector(".material-symbols-outlined").textContent = isPassword ? "visibility_off" : "visibility";
+    });
+
+    async function sha256(str) {
+        var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+        return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+    }
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        errorEl.classList.add("hidden");
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">progress_activity</span> Проверка...';
+
+        var username = form.username.value.trim();
+        var password = form.password.value;
+
+        try {
+            var uHash = await sha256(username);
+            var pHash = await sha256(password);
+
+            if (uHash === VALID_USERNAME_HASH && pHash === VALID_PASSWORD_HASH) {
+                sessionStorage.setItem(AUTH_KEY, pHash);
+                sessionStorage.setItem(AUTH_TS, String(Date.now()));
+                window.location.replace("index.html");
+                return;
+            }
+
+            errorEl.classList.remove("hidden");
+            form.classList.add("shake");
+            setTimeout(function () { form.classList.remove("shake"); }, 500);
+        } catch (err) {
+            errorEl.classList.remove("hidden");
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-lg">login</span> Войти';
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5de619",
+              "background-light": "#f6f8f6",
+              "background-dark": "#162111",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "sans": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Отзывы клиентов | Психолог</title>
+<meta name="description" content="Отзывы клиентов о работе с психологом. Реальные истории и результаты терапии."/>
+<meta property="og:title" content="Отзывы клиентов | Психолог"/>
+<meta property="og:description" content="Реальные истории и результаты терапии."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/reviews/"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="../index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../about/index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../services/index.html">Услуги</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../blog/index.html">Блог</a>
+<a class="text-primary font-bold transition-colors" href="index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="../booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../about/index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../services/index.html">Услуги</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../blog/index.html">Блог</a>
+<a class="block text-sm text-primary font-bold" href="index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="../booking/index.html">Записаться</a>
+</div>
+<main id="main-content" class="flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 md:px-10">
+<!-- Hero Section -->
+<div class="flex flex-col gap-4 mb-12">
+<div class="flex flex-wrap justify-between items-end gap-6">
+<div class="flex min-w-72 flex-col gap-3 max-w-2xl">
+<h1 class="text-slate-900 dark:text-slate-50 text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Отзывы клиентов</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal">Истории перемен и честные отзывы о нашей совместной работе. Каждый путь уникален, и я благодарен за доверие.</p>
+</div>
+<div class="bg-primary/10 border border-primary/20 p-4 rounded-2xl max-w-xs">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+<span class="font-bold text-sm">Конфиденциальность</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Все отзывы публикуются исключительно с добровольного согласия клиентов. Имена и некоторые детали могут быть изменены для сохранения полной анонимности.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Featured Reviews Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<!-- Card 1 -->
+<div class="flex flex-col gap-6 p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-16 bg-center bg-no-repeat bg-cover rounded-full border-2 border-primary/20" role="img" aria-label="Портрет улыбающейся женщины, 32 года" data-alt="Portrait of a smiling woman age 32" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdlsmHZKcnJamvPygmWDZEwAns38CjRiKzVuXKMQn-wcFUQU61Vn_mtVmMrEQCkns9Gfs6LwDpxsrh7hOL6nQ_ECWlN8_OVL08MMzv-BduBDMssssRXLJHO4vM_mJiQwx0n1AgJp707-eCIC5De4OcbzDfhn6bPaET1mYQ8QwjuFL045bskCOSRyONCSbqPGr_Red9aKf5sFl4sTyJHpFZ3E0gJ-KhgFb1XjwTnwaV091X21WzrqLA5khjUnx13zDtv8-TCUkXTFg");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight">Анна, 32 года</p>
+<p class="text-primary text-sm font-medium">Индивидуальная терапия</p>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute -top-4 -left-4">format_quote</span>
+<p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed italic relative z-10">
+                                «Благодаря терапии я смогла найти внутренние ресурсы и справиться с затяжным кризисом в отношениях. Научилась слышать себя и свои потребности, что полностью изменило качество моей жизни.»
+                            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-6 p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-16 bg-center bg-no-repeat bg-cover rounded-full border-2 border-primary/20" role="img" aria-label="Портрет мужчины в деловом стиле, 40 лет" data-alt="Portrait of a professional man age 40" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdfabHHA1E86N5NLZIPeJGj-Wc0xOd6XPNxcRGQVyjm26FmUQAQN9fmtzMQmV1Mp2pBIVkX56ojL28iVTCHySzI89zN9TJm7m-46HIWX32QTrQSzpFzcn7bmIEnvdFRZ46Spj42FSSeDTxBIergiRKU5V1tT_WRpn_FsbN3h7hKFUiIB9dekhZ6bar9-Y-TqvDbGaHV-shnc3t7xn0ap9Z7cAnV3kc3r9rfgbUR051yOXhTz1hyOJn1kEeNpACSwA_r49DkjGdse8");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight">Михаил, 40 лет</p>
+<p class="text-primary text-sm font-medium">Работа с тревогой</p>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute -top-4 -left-4">format_quote</span>
+<p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed italic relative z-10">
+                                «Очень профессиональный подход. Помогло разобраться в причинах постоянной тревоги за короткий срок. Практические техники, которые мы освоили, теперь со мной каждый день.»
+                            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-6 p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-16 bg-center bg-no-repeat bg-cover rounded-full border-2 border-primary/20" role="img" aria-label="Портрет молодой женщины, 27 лет" data-alt="Portrait of a young woman age 27" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAb6guq2ZBk5a6o_MEPPiLDrr92gTfq6ZNNk0qfXS6DiZNztzByxfe953XBdDc5RH-x10aNs2Ql9W7uazxlT8i1CGdRGDB7lZBhNwH1B5SIjb5umEXkjdZi-rdPxoKVkM9OYQvxKAPE13ZgPA4bu8sw2cIj-mafR4cN2Ho1EosewfH6I6zIbwdtfItghr4BnVN77cSfA1uWu6r0dJhLpdIjUNzs2aBd53me-ud0tjtnjA3ES219pAWnSwr--cIoxiSl5mFmL064K2A");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight">Елена, 27 лет</p>
+<p class="text-primary text-sm font-medium">Самооценка</p>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute -top-4 -left-4">format_quote</span>
+<p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed italic relative z-10">
+                                «Никогда не думала, что жизнь может быть такой спокойной и предсказуемой. Спасибо за поддержку, понимание и ту бережность, с которой мы проходили самые сложные темы.»
+                            </p>
+</div>
+</div>
+</div>
+<!-- More Reviews Horizontal Scroll -->
+<h2 class="text-slate-900 dark:text-slate-50 text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">Другие истории</h2>
+<div class="flex overflow-x-auto gap-6 pb-12 px-4 no-scrollbar">
+<div class="flex-none w-[350px] flex flex-col gap-4 p-6 bg-primary/5 dark:bg-primary/5 rounded-2xl border border-primary/10">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-2xl" role="img" aria-label="Тёплый абстрактный фон в зелёных тонах" data-alt="Warm abstract forest green background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7Lz3vBrPsz44KC-Iz0IWZ4Yt1NvssEFdek9RRRuMkvryckjH-wxFVkRFp5XX1868qd9fjh94QYhaaNK3uOCNqc2DKFTnCOlk6fdBjd-RUmBz2B1DPTKNL7rQfxDsr2lm0JA5UZqu7xUl8iwOvfr5P_2QUDNIhYKuX3NpZMAdMV_M9z-RQ1TzxaoAqQ-Jv_wIf44oDHWwCeFPiq3uHR97avfFGibGiOaMeOLPVIhhUiNOSHJLWb8ZhAECrmi9i0jLBt3dHDqtG660");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight mb-1">Ольга, 35 лет</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                «Процесс был глубоким и иногда непростым, но результат того стоил. Рекомендую как чуткого специалиста, способного создать безопасное пространство.»
+                            </p>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+</div>
+</div>
+</div>
+<div class="flex-none w-[350px] flex flex-col gap-4 p-6 bg-primary/5 dark:bg-primary/5 rounded-2xl border border-primary/10">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-2xl" role="img" aria-label="Спокойные абстрактные волны в сине-зелёных тонах" data-alt="Calm abstract blue and green waves" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsEdFlwJd5aT67OJS7HqSa1WUFG2I1FIZseV3ze8L1L9znTso4jxdASJL-dj36H7wiFOb43ILVE-UmSNEqurgoX89KKHM03Gvlil5mnYqA2P7WtBUq0cel5pvvT3AzfZx6Re9juV3QNiwrRiVHyugiA0o6dyOj-CYZaUsOprecJ-Sx0SfzuBtbZ6gySbszlgt3qCId6IfRTnBtso5G2AifqsYEUCZEyuvvJzyl6nIwtgv60QRzPJFhrY1GBste-fh8mWuffe22lXM");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight mb-1">Игорь, 29 лет</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                «Работа с психологом помогла мне пересмотреть свои карьерные цели и убрать страх публичных выступлений. Теперь я чувствую себя гораздо увереннее.»
+                            </p>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+</div>
+</div>
+</div>
+<div class="flex-none w-[350px] flex flex-col gap-4 p-6 bg-primary/5 dark:bg-primary/5 rounded-2xl border border-primary/10">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-2xl" role="img" aria-label="Спокойный абстрактный узор утреннего света" data-alt="Serene abstract morning sunlight pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1WPYU2u5_GnvH3rC3ZIUvHx4ZsH8NCi32GHGx5sHKeEeRMWg2GRsBlQMrjqPCJpgAuY5q6ZtE_Bprad07h5p4qJQCvERiHIGRYAFBD-QxP2cmquG-agWeVdcNf1w9P6jhKUAvyDLV-Q25PBEb72_v1xM0QNU1Mibqjf25SruwoUd4AG7N9moNaYUBYJHm8vIJCQOnz-VEKlv5uz5GoQOXpy2GG5gBB-1Ozq0Itt2oBcUtlq5EPQPiEbEbVJ_MZGetMapauycDVX8");'></div>
+<div>
+<p class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight mb-1">Марина, 44 года</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                «Семейные консультации спасли наш брак. Мы научились разговаривать друг с другом без обвинений и слышать то, что действительно важно.»
+                            </p>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ethics Note -->
+<div class="my-12 p-8 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">gavel</span>
+<h3 class="text-xl font-bold mb-3">Этика и безопасность</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Я строго придерживаюсь Этического кодекса психолога. Конфиденциальность — это основа терапевтического процесса. Все отзывы здесь размещены только после завершения терапии или важного этапа работы и только с письменного разрешения клиента. Вы всегда вправе попросить удалить свой отзыв в любой момент.
+                    </p>
+</div>
+<!-- Call to Action -->
+<section class="mt-8 mb-20">
+<div class="relative overflow-hidden rounded-[2rem] bg-slate-900 dark:bg-primary/10 p-10 md:p-20 text-center">
+<div class="relative z-10 flex flex-col items-center gap-6">
+<h2 class="text-white dark:text-slate-50 text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl">
+                                Готовы начать свой путь к изменениям?
+                            </h2>
+<p class="text-slate-300 dark:text-slate-400 text-lg max-w-xl">
+                                Сделайте первый шаг навстречу гармонии. Запишитесь на ознакомительную консультацию уже сегодня.
+                            </p>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-slate-900 text-lg font-bold hover:scale-105 transition-transform">
+                                    Записаться на сессию
+                                </button>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 border-2 border-white/20 text-white text-lg font-bold hover:bg-white/10 transition-colors">
+                                    Узнать о методах
+                                </button>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] -mr-32 -mt-32 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 blur-[100px] -ml-32 -mb-32 rounded-full"></div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+          <div>
+            <span class="text-white text-lg font-bold font-display tracking-tight">Психолог</span>
+            <span class="block text-xs text-primary/80">Ставрополь</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Профессиональная психологическая помощь. Бережный подход к каждому клиенту.</p>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="../index.html">Главная</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../about/index.html">Обо мне</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../services/index.html">Услуги</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../blog/index.html">Блог</a></li>
+          <li><a class="hover:text-primary transition-colors" href="index.html">Отзывы</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Contacts -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Контакты</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">phone</span><a class="hover:text-primary transition-colors" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">mail</span><a class="hover:text-primary transition-colors" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>г. Ставрополь</span></li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Соцсети</h4>
+        <div class="flex gap-3">
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="Telegram"><span class="material-symbols-outlined text-lg">send</span></a>
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="WhatsApp"><span class="material-symbols-outlined text-lg">chat</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Психолог. Все права защищены.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary transition-colors" href="../privacy.html">Политика конфиденциальности</a>
+        <a class="hover:text-primary transition-colors" href="../terms.html">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body></html>

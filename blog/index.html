@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5de619",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Блог Психолога | Ставрополь</title>
+<meta name="description" content="Блог психолога — статьи о тревожности, отношениях, самооценке и психологическом благополучии."/>
+<meta property="og:title" content="Блог Психолога | Ставрополь"/>
+<meta property="og:description" content="Статьи о тревожности, отношениях, самооценке и психологическом благополучии."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<link rel="canonical" href="/blog/"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>
+<script>
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">Перейти к содержимому</a>
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 lg:px-20 py-4">
+<a class="flex items-center gap-2 shrink-0" href="../index.html">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100">Психолог</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ставрополь</span>
+</div>
+</a>
+<nav class="hidden md:flex flex-1 flex-wrap justify-center items-center gap-6 lg:gap-8 text-sm" aria-label="Основная навигация">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../index.html">Главная</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../about/index.html">Обо мне</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../services/index.html">Услуги</a>
+<a class="text-primary font-bold transition-colors" href="index.html">Блог</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../reviews/index.html">Отзывы</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors font-medium" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-primary/90 text-slate-900 px-5 py-2 rounded-full font-bold transition-all shrink-0" href="../booking/index.html">Записаться</a>
+</nav>
+<button type="button" id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-primary/10 px-6 py-4 space-y-3" role="dialog" aria-label="Мобильное меню">
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../index.html">Главная</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../about/index.html">Обо мне</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../services/index.html">Услуги</a>
+<a class="block text-sm text-primary font-bold" href="index.html">Блог</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a>
+<a class="block text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="../faq/index.html">FAQ</a>
+<button id="theme-toggle-mobile" type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-300">
+  <span id="theme-icon-light-mobile" class="material-symbols-outlined dark:hidden">dark_mode</span>
+  <span id="theme-icon-dark-mobile" class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="inline-flex w-full justify-center bg-primary hover:bg-primary/90 text-slate-900 px-5 py-3 rounded-full font-bold transition-all text-center" href="../booking/index.html">Записаться</a>
+</div>
+<main id="main-content">
+<!-- Hero Section -->
+<section class="relative py-16 lg:py-24 overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                    Ваш проводник в мир психологии
+                </div>
+<h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Блог психолога</h1>
+<p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Делюсь профессиональными знаниями, инсайтами из практики и практическими советами для вашего психологического благополучия и гармонии.
+                </p>
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+<button class="flex items-center gap-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-8 py-4 rounded-xl font-bold transition-all hover:bg-slate-800">
+                        Начать чтение
+                        <span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Articles Section -->
+<section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-extrabold mb-2">Свежие статьи</h2>
+<div class="h-1.5 w-12 bg-primary rounded-full"></div>
+</div>
+<div class="hidden md:flex gap-2">
+<button type="button" id="carousel-prev" class="p-2 border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors" aria-label="Предыдущая статья">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button type="button" id="carousel-next" class="p-2 border border-primary/20 rounded-lg hover:bg-primary/10 transition-colors" aria-label="Следующая статья">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div id="blog-carousel" class="flex w-full max-w-full min-w-0 gap-8 overflow-x-auto overflow-y-visible pb-4 scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0">
+<!-- Article Card 1 -->
+<div class="group shrink-0 w-[min(22rem,calc(100vw-2.5rem))] md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] bg-white dark:bg-background-dark/40 border border-primary/5 rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-primary/30 transition-all">
+<div class="relative h-56 overflow-hidden">
+<img alt="Рассвет сквозь деревья — символ надежды" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Sunrise through trees symbolizing hope" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmPmWTa5XlDW8J_hV4kY8noq6CU5-iqnsTb65sq-x9DkwFBWgRV-rJhflKsOKAL9c53McQt-w2VzDsVzhKVnbRH_mtjv3jaFHINc6cT8g8a_D9KK0oTigbBN36_o4qh35ONMIlkBhSvgPc5fPUT1hMX65boTIdicZ8zcLRkQd7C0BevpdxXBk9x8KwQcX5GJw1nGC0hbqBlr6_sf2maNtD7ZkBNopPtwC44DsINemBB_N6RZGeceSenjooK5IUohIFsfrnSCt_icM"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-background-dark/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Самопомощь</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">Как справиться с тревогой в неопределенности</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            В современном мире тревога стала частым спутником. Разберем 5 работающих техник заземления, которые помогут вам вернуть контроль над своим состоянием...
+                        </p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:translate-x-2 transition-transform" href="#">
+                            Читать далее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Article Card 2 -->
+<div class="group shrink-0 w-[min(22rem,calc(100vw-2.5rem))] md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] bg-white dark:bg-background-dark/40 border border-primary/5 rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-primary/30 transition-all">
+<div class="relative h-56 overflow-hidden">
+<img alt="Балансирующая пирамида камней на воде" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Balanced stack of stones on water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHggXeZxysos301eqcm_N9FEpXbO5UwPhY1K1w2TUiRMFntxKqkghMg1SwUX3ggCY95_Od7qeQbcPMVvRiFFF7eVZVrB9RHBPIAJmDIR7-NNiJotWm_c0pM3XgD9F7X7v58XGsi0K-usP3np49e6ZxN4ZHj8MJ5C0_rGN8qxI2shJBIXI5H8xNAPWpjykGIeDWvUFcBu5gAnIkdTHumgkLSaNO1ECJK8yg2Z77pbYZSVgT1BN8y7G2aHdpRAWnFtKR-OmY0ZgahNU"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-background-dark/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Отношения</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">Личные границы: как сказать «нет» без чувства вины</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Умение выстраивать границы — это не эгоизм, а забота о своем ментальном здоровье. Узнайте, как защитить свое пространство и время...
+                        </p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:translate-x-2 transition-transform" href="#">
+                            Читать далее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Article Card 3 -->
+<div class="group shrink-0 w-[min(22rem,calc(100vw-2.5rem))] md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] bg-white dark:bg-background-dark/40 border border-primary/5 rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-primary/30 transition-all">
+<div class="relative h-56 overflow-hidden">
+<img alt="Человек спокойно сидит на природе" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Person sitting peacefully in nature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACYNT_6F6dc40WRJNWL-Nk9J_OBQAL6FHEseigdxusK2HY2aUZcysOu-AtDqD_hdNUxmIzslqQpkeZE0SvfRF14MaFafVTHO0pMlxTR0bZqVliqXi7BFOSicvPtkgEohts9BOkbsHPcGEtmUCrkjZBlu4CDHtS8GmdZwb4z4SHyarc-ByrXYul1_dZIjpUsN4hKae-dH0ycwVqOm8giy1k-ziHtq6qKmxvtmCmRiO5szQHIL6tnKb56Ar-fbnestdSb3xibpugJBs"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-background-dark/90 px-3 py-1 rounded-lg text-xs font-bold text-primary">Психосоматика</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">Почему тело болеет, когда душа молчит</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Связь между нашими эмоциями и физическим самочувствием гораздо теснее, чем кажется. Разбираем основы психосоматики и сигналы тела...
+                        </p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:translate-x-2 transition-transform" href="#">
+                            Читать далее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<section class="py-20 bg-primary/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+<div>
+<h2 class="text-3xl font-extrabold mb-2">Видео-консультации</h2>
+<p class="text-slate-600 dark:text-slate-400">Короткие видео-ответы на важные вопросы</p>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-2 border-2 border-primary/30 rounded-xl font-bold hover:bg-primary/10 transition-colors" href="#">
+                        Смотреть в Telegram <span class="material-symbols-outlined">play_circle</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Video Card 1 -->
+<a class="group relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-200" href="#">
+<img alt="Превью вертикального видео" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vertical portrait for mobile video content" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH8whTsSkSzc3rk_x-2zUuJerAFakIQmMHa0S4jGhgO8caLvBLD3ZJpwQNJ-30SnSIpnlkwSwivcv3hGAiTrcN6IBR0wxnK5aFGa02UBsLi5qGT3JU3NMC4MyOzmkTOX8PmxeX_hxtR5G6ZvKr3VOlsJ4TA8qurx8duevXpz6Pqs5tf-_UBROzTPfc34OklKWwDPW9DpL4LkFMNq2vMUOSjUbKblf3WNgVeuUbr2f6yWxx51rtDwocs7ZqYj9D3pnA7NBOe_0RdNM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="bg-primary/90 text-background-dark p-4 rounded-full">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-sm">С чего начать поход к психологу?</p>
+</div>
+</a>
+<!-- Video Card 2 -->
+<a class="group relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-200" href="#">
+<img alt="Превью видео о коммуникации" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vertical portrait focusing on communication" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKCvgWdo2AHXf_oKMOYLAKzQJ_0iQoOH6fMwcfr2wBfSpiM02k3OFJNEGIfBoo91hjceVEfIfHArLR2ZlVls3GguTQlOUqMasHe5bOC2PYnu3TEvAynynLHP5OdOSYJ7dWb9gfsDsLyY9b1VgzRke9jFZOo8mfCtbJnhQz1GiO_Vni1MTtMiBrppGGPkWhiMU8urcT8qkcbwJ9jxcGnReJiTtAQeMuhTYlm3fpJRmfKgTxNFs2lu7985R3x7bgnQuBEY-qDUw6L_Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="bg-primary/90 text-background-dark p-4 rounded-full">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-sm">Техника 5-4-3-2-1 от стресса</p>
+</div>
+</a>
+<!-- Video Card 3 -->
+<a class="group relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-200" href="#">
+<img alt="Превью видео об эмоциях" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vertical portrait of emotional expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzPyBpuptZP3Rmbgvqx6OVTswBNEmdqxBB9hc485L4TstPp_lehprO4r8ESXqrUYozxXxJWaqIQfLNQaVjs9SgD7plva69jP38ueGUwa7CJPgBtyKfokTIKPKXKIs0vVPT6emsB-CHFEKgpcE-GuZDXWsM_fl0yeKLBK8ufVBxpswb1fgua4VkOcVM81R60BWaKwJKZZViIZl8D18DNIEzDfG170HYvSgnQ7Xewxri2XvGfkSzvlLekLWr-m2rqZFs-0AmVrDnQM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="bg-primary/90 text-background-dark p-4 rounded-full">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-sm">Синдром самозванца: как бороться</p>
+</div>
+</a>
+<!-- Video Card 4 -->
+<a class="group relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-200" href="#">
+<img alt="Превью видео о балансе работы и жизни" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vertical portrait about work life balance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxDGyqDVKzno71rZpddb2IlLYGi_XFbVeZpjfKYrFQULdLJQE6D1aDDWNu2VoJtKUFfc2msZIsMuJBc1A_2jX9C4ShGhKmQryJvUR4SPxG14X9OFdmbWb76-Ef4cIHFaOUvD1_qZe23Y1nkNOXflTsGBMQ7jDMVgboJpl5QeJiGNZ0EjhF8y92XGnN1uDEjB8Yqz6tpqLxUoqQwKAB0myQrxTrJ33q1QrWYuoUznmRb-lQLvs9PT3eADuuekk1kZvYO4Kygx5Mpnw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="bg-primary/90 text-background-dark p-4 rounded-full">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white font-bold text-sm">Выгорание или просто усталость?</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-4">
+<div class="max-w-5xl mx-auto bg-slate-900 dark:bg-primary/10 rounded-[2rem] p-8 md:p-16 text-center relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-white dark:text-slate-100 mb-6 leading-tight">Подпишитесь на полезные обновления</h2>
+<p class="text-slate-300 dark:text-slate-400 mb-10 text-lg max-w-xl mx-auto">
+                    Раз в неделю я отправляю дайджест лучших статей и практических упражнений для ментального здоровья.
+                </p>
+<form id="newsletter-form" class="flex flex-col gap-4 max-w-md mx-auto" method="post" action="">
+<div id="form-success" class="hidden rounded-xl border border-primary/40 bg-primary/15 px-4 py-3 text-sm font-semibold text-primary" role="status" aria-live="polite">
+Вы подписаны! Спасибо — скоро пришлём первое письмо.
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full">
+<label class="flex flex-col gap-2 flex-1 text-left" for="newsletter-email">
+<span class="text-sm font-semibold text-slate-300 dark:text-slate-300">E-mail</span>
+<input class="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary" id="newsletter-email" name="email" placeholder="name@example.com" type="email" required autocomplete="email"/>
+</label>
+<button class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform sm:self-end shrink-0" type="submit">
+                        Подписаться
+                    </button>
+</div>
+</form>
+<div class="mt-8 flex justify-center gap-6 text-slate-400">
+<a class="hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">alternate_email</span> Telegram
+                    </a>
+<a class="hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">group</span> ВКонтакте
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+          <div>
+            <span class="text-white text-lg font-bold font-display tracking-tight">Психолог</span>
+            <span class="block text-xs text-primary/80">Ставрополь</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Профессиональная психологическая помощь. Бережный подход к каждому клиенту.</p>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="../index.html">Главная</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../about/index.html">Обо мне</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../services/index.html">Услуги</a></li>
+          <li><a class="hover:text-primary transition-colors" href="index.html">Блог</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../reviews/index.html">Отзывы</a></li>
+          <li><a class="hover:text-primary transition-colors" href="../faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Contacts -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Контакты</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">phone</span><a class="hover:text-primary transition-colors" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">mail</span><a class="hover:text-primary transition-colors" href="mailto:psy@ivanov.ru">psy@ivanov.ru</a></li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>г. Ставрополь</span></li>
+        </ul>
+      </div>
+      <!-- Social -->
+      <div>
+        <h4 class="text-white font-display font-bold mb-4">Соцсети</h4>
+        <div class="flex gap-3">
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="Telegram"><span class="material-symbols-outlined text-lg">send</span></a>
+          <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all" href="#" aria-label="WhatsApp"><span class="material-symbols-outlined text-lg">chat</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <p>&copy; 2026 Психолог. Все права защищены.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary transition-colors" href="../privacy.html">Политика конфиденциальности</a>
+        <a class="hover:text-primary transition-colors" href="../terms.html">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+(function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-menu-icon');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+(function () {
+  var form = document.getElementById('newsletter-form');
+  var success = document.getElementById('form-success');
+  if (!form || !success) return;
+  var hideTimer;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    success.classList.remove('hidden');
+    form.reset();
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(function () {
+      success.classList.add('hidden');
+    }, 5000);
+  });
+})();
+(function () {
+  var track = document.getElementById('blog-carousel');
+  var prevBtn = document.getElementById('carousel-prev');
+  var nextBtn = document.getElementById('carousel-next');
+  if (!track || !prevBtn || !nextBtn) return;
+  function scrollByOneCard(direction) {
+    var cards = track.children;
+    if (!cards.length) return;
+    var first = cards[0];
+    var second = cards[1];
+    var step = second ? second.offsetLeft - first.offsetLeft : first.offsetWidth;
+    track.scrollBy({ left: direction * step, behavior: 'smooth' });
+  }
+  prevBtn.addEventListener('click', function () {
+    scrollByOneCard(-1);
+  });
+  nextBtn.addEventListener('click', function () {
+    scrollByOneCard(1);
+  });
+})();
+</script>
+</body></html>

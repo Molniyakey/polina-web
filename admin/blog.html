@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Блог и медиа — Центр Психологии</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f6f8f6",
+              "on-surface-variant": "#3e4a36",
+              "background": "#f6f8f6",
+              "secondary": "#5de619",
+              "primary": "#256d00",
+              "outline": "#6e7b64",
+              "outline-variant": "#bdcbb0",
+              "surface-bright": "#ffffff",
+              "surface-container": "#edf1ed",
+              "on-surface": "#0f170a",
+              "on-background": "#0f170a",
+              "on-primary": "#ffffff",
+              "tertiary": "#e0f2fe",
+              "on-tertiary": "#075985",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+<script src="auth-guard.js"></script>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<aside id="admin-sidebar" class="fixed left-0 top-0 h-full flex flex-col p-4 h-screen w-64 border-r border-outline-variant/40 dark:border-slate-800 bg-surface-container-low dark:bg-slate-900 font-manrope antialiased text-sm shadow-sm z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+<div class="mb-8 px-4 py-2">
+<h1 class="text-xl font-bold tracking-tight text-lime-700 dark:text-lime-300">Центр Психологии</h1>
+<p class="text-xs text-slate-500 mt-1">Администратор клиники</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="index.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary">dashboard</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Дашборд</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="content.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary">edit_note</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Контент-менеджер</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-lime-100/50 dark:bg-lime-900/30 text-lime-700 dark:text-lime-300 font-bold" href="blog.html">
+<span class="material-symbols-outlined">video_library</span>
+<span>Блог и медиа</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="services.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary">payments</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Услуги и цены</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="reviews-faq.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary">rate_review</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Отзывы и FAQ</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl border border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-bright hover:border-secondary/20 hover:shadow-md hover:shadow-secondary/10 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/90 dark:hover:border-secondary/30 transition-all duration-200" href="leads.html">
+<span class="material-symbols-outlined text-[22px] text-outline group-hover:text-secondary shrink-0 transition-colors dark:text-slate-500 dark:group-hover:text-secondary">contact_mail</span>
+<span class="font-headline font-semibold tracking-tight leading-snug">Заявки клиентов</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200 pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="settings.html"><span class="material-symbols-outlined">settings</span><span>Настройки</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#" onclick="sessionStorage.clear();window.location.replace('login.html');return false;"><span class="material-symbols-outlined">logout</span><span>Выйти</span></a>
+<div class="mt-4 px-4">
+<a class="block w-full py-2 bg-primary text-on-primary rounded-full text-xs font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform text-center" href="../index.html">Перейти на сайт</a>
+</div>
+</div>
+</aside>
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+<header class="flex items-center h-16 px-4 md:px-8 ml-0 md:ml-64 w-full md:w-[calc(100%-16rem)] bg-white/80 dark:bg-slate-950/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100 dark:border-slate-800 font-manrope text-sm gap-2">
+<div class="flex items-center gap-2 flex-1 min-w-0 basis-0">
+<button type="button" id="sidebar-toggle" class="md:hidden p-2 -ml-1 rounded-xl text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 shrink-0" aria-label="Меню"><span class="material-symbols-outlined">menu</span></button>
+<div class="relative flex-1 min-w-0 max-w-xs lg:max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-lime-500/20 text-sm" placeholder="Поиск по панели..." type="text"/>
+</div>
+</div>
+<p class="shrink-0 font-bold text-slate-800 dark:text-slate-100 text-sm text-center px-2 truncate max-w-[100px] sm:max-w-none">Блог и медиа</p>
+<div class="flex items-center justify-end gap-2 md:gap-6 flex-1 basis-0 min-w-0">
+<button type="button" class="text-slate-500 hover:text-lime-600 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button type="button" class="text-slate-500 hover:text-lime-600 transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1 md:mx-2 shrink-0 hidden sm:block"></div>
+<div class="flex items-center gap-2 md:gap-3 shrink-0">
+<div class="text-right hidden sm:block">
+<p class="font-bold text-slate-800 leading-none">Admin</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter mt-1">Clinical Lead</p>
+</div>
+<img alt="" class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-lime-100 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnhTgF6Xs0XTIgXTq3P9RBcFqm4iw7r2f3b4d_-hC7VQuQc2XvImNc7GEuTfGlgYCgU3SAz-mK4NLZwHVR4B-yIVNZMAIIBIb4oHCJCGhmt0oRPjHglTLu2rsYb3xJoXlf5OEf_-lHmEbvN6n7C7qsPAHtXn8wo7dNoRE3zp-AoyOybZ12cSc10q-hkz7Cynnr7JWCkOBTOEahbE_Y6078x_YCTu5SoDc4Iq7PQ4NKjiB3l1wI9Rsr3UzUY6uCkgD_roUwzXKj7oA"/>
+</div>
+</div>
+</header>
+<main class="ml-0 md:ml-64 p-8 min-h-[calc(100vh-4rem)]">
+<header class="mb-8 flex flex-wrap items-end justify-between gap-4">
+<div>
+<h2 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-2">Блог и медиа</h2>
+<p class="text-slate-500 text-lg max-w-2xl">Управление статьями и обложками для страницы <code class="text-xs bg-surface-container px-1.5 py-0.5 rounded">/blog/</code>. Изменения здесь должны отражаться на сайте после подключения бэкенда.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline" href="../blog/index.html"><span class="material-symbols-outlined text-[18px]">visibility</span>Публичный блог</a>
+<button type="button" id="btn-new-article" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-secondary text-on-surface font-bold text-sm shadow-lg shadow-secondary/20 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">add</span>
+Новая статья
+</button>
+</div>
+</header>
+<section id="blog-articles-list" class="space-y-4">
+<div class="blog-article-card bg-surface-bright p-4 rounded-2xl border border-outline-variant/50 shadow-sm">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="w-full sm:w-28 h-28 rounded-xl bg-slate-200 shrink-0 overflow-hidden">
+<img alt="" class="blog-card-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdmJ-TisQtCgxccw5VvDQC4CXwMe-JX8NxslIzGX_dL73x5xjDz7XlmmnxMlDsKzLV59ATw47X9vQM_pm5eRW-dhYQx8pySmz6wW7QRs3J1N3ZTI0-W2b7m4liqHZmvBCfnc5CVUSybOeQjd2zoGriGUDcb9BsyvOFIdc2Gnxq8V4I4CPLGp-xAIps-BezVk-gVasgGGJVsnMYjCZDqDArzvTl_4kKSgSYdcmVRMAFcmomkWXqAtDJq7ee8v1q0ae8qFtyF-_fHOQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Заголовок</label>
+<input class="blog-card-title w-full rounded-xl border border-slate-200 px-3 py-2 text-sm font-headline font-semibold mb-3 focus:ring-2 focus:ring-secondary/30" type="text" value="Как справиться с тревожностью"/>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Анонс</label>
+<textarea class="blog-card-teaser w-full min-h-[72px] rounded-xl border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-secondary/30" rows="2">Краткое описание для списка статей на сайте.</textarea>
+<div class="flex flex-wrap items-center gap-2 mt-3">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Статус</label>
+<select class="blog-status-select rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-secondary/30">
+<option>Черновик</option>
+<option>Опубликовано</option>
+</select>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button type="button" class="blog-save-draft text-xs font-bold px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-secondary/20">Сохранить черновик</button>
+<button type="button" class="blog-publish text-xs font-bold px-3 py-1.5 rounded-lg bg-primary text-on-primary">Опубликовать</button>
+<button type="button" class="blog-delete text-xs font-bold px-3 py-1.5 rounded-lg border border-error/40 text-error hover:bg-error-container">Удалить</button>
+</div>
+</div>
+</div>
+</div>
+<div class="blog-article-card bg-surface-bright p-4 rounded-2xl border border-outline-variant/50 shadow-sm">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="w-full sm:w-28 h-28 rounded-xl bg-slate-200 shrink-0 overflow-hidden">
+<img alt="" class="blog-card-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA87NrTmzOdPP6UHsZItTF4fh7cgpMlds1hUiQ7-X72Gcak86OPJ886-nPF64Wp_zJEaREbXjadgM-uzrmCuOtJd5rkOY8rzmwOZyuqUUcksUGAmRtEKpz2sIBld82lDrWZa5-cARg7zppvn7RzkR7NdNnmELJP17CZQ45V8B1zonYnAcOHNi-6PWoEpOcCcdchjMcSPJpbzGRal3eZeVFTg3rnofSte5rEQYCWvSDsHHuUjkgsnH-W7fpdtXgELjt6v_LXHvXU5-g"/>
+</div>
+<div class="flex-1 min-w-0">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Заголовок</label>
+<input class="blog-card-title w-full rounded-xl border border-slate-200 px-3 py-2 text-sm font-headline font-semibold mb-3 focus:ring-2 focus:ring-secondary/30" type="text" value="Границы в отношениях"/>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Анонс</label>
+<textarea class="blog-card-teaser w-full min-h-[72px] rounded-xl border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-secondary/30" rows="2">Текст для карточки в ленте блога.</textarea>
+<div class="flex flex-wrap items-center gap-2 mt-3">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Статус</label>
+<select class="blog-status-select rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-secondary/30">
+<option>Черновик</option>
+<option selected>Опубликовано</option>
+</select>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button type="button" class="blog-save-draft text-xs font-bold px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-secondary/20">Сохранить черновик</button>
+<button type="button" class="blog-publish text-xs font-bold px-3 py-1.5 rounded-lg bg-primary text-on-primary">Опубликовать</button>
+<button type="button" class="blog-delete text-xs font-bold px-3 py-1.5 rounded-lg border border-error/40 text-error hover:bg-error-container">Удалить</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<p class="mt-8 text-sm text-on-surface-variant">Медиа-библиотека (загрузка изображений) — заглушка; добавьте хранилище при интеграции.</p>
+</main>
+<script>
+const sidebar = document.getElementById('admin-sidebar');
+const toggle = document.getElementById('sidebar-toggle');
+const overlay = document.getElementById('sidebar-overlay');
+if (toggle && sidebar && overlay) {
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+}
+
+function wireBlogCard(card) {
+  const statusSelect = card.querySelector('.blog-status-select');
+  card.querySelector('.blog-save-draft')?.addEventListener('click', () => {
+    const s = statusSelect ? statusSelect.value : '';
+    alert('Черновик сохранён (демо). Статус: ' + s);
+  });
+  card.querySelector('.blog-publish')?.addEventListener('click', () => {
+    if (statusSelect) statusSelect.value = 'Опубликовано';
+    alert('Опубликовано (демо). Статус: Опубликовано');
+  });
+  card.querySelector('.blog-delete')?.addEventListener('click', () => {
+    if (confirm('Удалить статью?')) card.remove();
+  });
+}
+
+document.querySelectorAll('.blog-article-card').forEach(wireBlogCard);
+
+const list = document.getElementById('blog-articles-list');
+const newBtn = document.getElementById('btn-new-article');
+if (list && newBtn) {
+  newBtn.addEventListener('click', () => {
+    const first = list.querySelector('.blog-article-card');
+    if (!first) return;
+    const clone = first.cloneNode(true);
+    clone.querySelectorAll('.blog-card-title').forEach((el) => { el.value = ''; });
+    clone.querySelectorAll('.blog-card-teaser').forEach((el) => { el.value = ''; });
+    const sel = clone.querySelector('.blog-status-select');
+    if (sel) { sel.selectedIndex = 0; }
+    const img = clone.querySelector('.blog-card-img');
+    if (img) { img.removeAttribute('src'); }
+    list.appendChild(clone);
+    wireBlogCard(clone);
+  });
+}
+</script>
+</body>
+</html>
